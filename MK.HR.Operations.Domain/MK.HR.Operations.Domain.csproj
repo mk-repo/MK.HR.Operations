@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MK.HR.Operations.IDomain\MK.HR.Operations.Domain.Api.csproj" />
+    <ProjectReference Include="..\MK.HR.Operations.Model.Api\MK.HR.Operations.Model.Api.csproj" />
+  </ItemGroup>
+
 </Project>

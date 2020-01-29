@@ -2,7 +2,7 @@
 
 namespace MK.HR.Operations.Model.Base
 {
-	internal class IdEntity : ModelApi.IIdEntity
+	public class IdEntity : ModelApi.IIdEntity
 	{
 		public IdEntity(string id)
 		{

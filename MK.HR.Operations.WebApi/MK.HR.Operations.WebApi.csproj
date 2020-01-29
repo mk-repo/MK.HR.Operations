@@ -15,8 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MK.HR.Operations.Domain\MK.HR.Operations.Domain.csproj" />
     <ProjectReference Include="..\MK.HR.Operations.IDomain\MK.HR.Operations.Domain.Api.csproj" />
     <ProjectReference Include="..\MK.HR.Operations.Model.Api\MK.HR.Operations.Model.Api.csproj" />
+    <ProjectReference Include="..\MK.HR.Operations.Model\MK.HR.Operations.Model.csproj" />
   </ItemGroup>
 
 </Project>

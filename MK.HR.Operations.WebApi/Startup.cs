@@ -10,6 +10,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ModelApi = MK.HR.Operations.Model.Api;
+using Model = MK.HR.Operations.Model;
+using DomainApi = MK.HR.Operations.Domain.Api;
+using Domain = MK.HR.Operations.Domain;
+
 
 namespace MK.HR.Operations.WebApi
 {
@@ -26,6 +31,9 @@ namespace MK.HR.Operations.WebApi
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+			services.AddTransient<ModelApi.IBaseModel, Model.BaseModel>();
+			services.AddTransient<ModelApi.Base.IIdEntity, Model.Base.IdEntity>();
+			services.AddTransient<DomainApi.IDomain, Domain.Domain>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

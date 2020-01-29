@@ -5,7 +5,7 @@ using MK.HR.Operations.Model.Api.Policy;
 
 namespace MK.HR.Operations.Model.Policy
 {
-	internal class Policy : IPolicy
+	public class Policy : IPolicy
 	{
 		public Policy(string id, string name)
 		{

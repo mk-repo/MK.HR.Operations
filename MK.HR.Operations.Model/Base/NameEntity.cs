@@ -2,7 +2,7 @@
 
 namespace MK.HR.Operations.Model.Base
 {
-	internal class NameEntity : ModelApi.INameEntity
+	public class NameEntity : ModelApi.INameEntity
 	{
 		public NameEntity(string name)
 		{

@@ -6,7 +6,7 @@ using MK.HR.Operations.Model.Api.Operations;
 
 namespace MK.HR.Operations.Model.Employee
 {
-	internal class Employee : IEmployee
+	public class Employee : IEmployee
 	{
 		public Employee(string id, string name, string department, DateTime joiningDate, decimal salary, string jobLevel)
 		{

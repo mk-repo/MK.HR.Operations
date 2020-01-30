@@ -12,15 +12,22 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
+import { EmployeeService } from './services/employee.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [HomeComponent, EmployeeComponent, ToolbarComponent, MainContentComponent, SidenavComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
     HropsRoutingModule
+  ],
+  providers: [
+    EmployeeService
   ]
 })
 export class HropsModule { }

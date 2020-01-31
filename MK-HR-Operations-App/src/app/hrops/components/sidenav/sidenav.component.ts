@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../../services/employee.service';
+import { Observable } from 'rxjs/internal/observable';
+import { Employee } from '../../models/employee';
 
 const WIDTH_OF_SMALL_SCREEN = 720;
 
@@ -10,10 +13,17 @@ const WIDTH_OF_SMALL_SCREEN = 720;
 export class SidenavComponent implements OnInit {
 
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${WIDTH_OF_SMALL_SCREEN}px)`);
-  constructor() { }
+  employees: Observable<Employee[]>;
+
+  constructor( private employeeService: EmployeeService) {
+
+   }
 
   ngOnInit() {
+    this.employees = this.employeeService.employees;
+    this.employeeService.loadAll();
   }
+
   showFiller = false;
 
   isSmallScreen(): boolean {
